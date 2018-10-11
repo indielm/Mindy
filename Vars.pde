@@ -1,0 +1,10 @@
+final int w = 1280, h = 720, whalf =w/2, hhalf = h/2;
+final int tileSize = 8, tileSizeHalf = tileSize/2;
+float drawScale = 1;
+float tileScale = tileSize*drawScale;
+int mw, mh;
+final String ores = "iron# coal# titanium# uranium#";
+JSONObject config;
+MMap mmap;
+long lastFrame = 0;
+float deltaT = 0;
