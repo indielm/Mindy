@@ -14,9 +14,9 @@ class Sprite {
 
 void initSprites() {
   spriteImages = new HashMap<String, PImage>();
-  spriteSheet = loadImage("data\\sprites.png");
+  spriteSheet = loadImage("data/sprites.png");
   spritesAtlas = new HashMap<String, Sprite>();
-  String [] lines = loadStrings("data\\atlas.csv");
+  String [] lines = loadStrings("data/atlas.csv");
   for (String line : lines) {
     String [] split = line.split(",");
     spritesAtlas.put(split[0], new Sprite(split));
@@ -30,6 +30,6 @@ PImage getSprite(String name) { // return sprite, if first request of sprite loa
   return spriteImages.get(name);
 }
 
-PImage getVariant(String type) {
+PImage getVariant(String type) { // tiles ending with # have a random variant numbered 1-3 
   return getSprite(type.replace('#', str(floor(random(1, 4))).charAt(0)));
 }

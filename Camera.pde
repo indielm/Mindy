@@ -4,11 +4,13 @@ PVector camTarget = new PVector(0, 0, 1);
 PVector camDelta = new PVector(0, 0, 0);
 
 void moveCam(float xO, float yO) {
+  PVector mouseVec = new PVector(-xO, -yO);
+  mouseVec.rotate(-1.02);
   float zoomScale = sqrt(max(cam.z, 2));
   float mult = 7.00/max(zoomScale, 4);
-  camTarget.x += mult*(xO);
-  camTarget.y += mult*(yO);
-  clampCamera();
+  camTarget.x += mult*(mouseVec.x);
+  camTarget.y += mult*(mouseVec.y);
+  //clampCamera();
   camScl.set(camTarget).div(tileScale);
 }
 
@@ -18,8 +20,10 @@ void zoomCam(float adj) {
   tileScale = tileSize*drawScale;
   camTarget.mult(drawScale/prev);
   camTarget.z = drawScale;
-  int sign = (int)(abs(adj)/adj);
-  moveCam(sign*(mouseX-whalf)/tileSize, sign*(mouseY-hhalf)/tileSize);
+  //int sign = (int)(abs(adj)/adj);
+  //     PVector mouseVec = new PVector(mouseX,mouseY);
+  // mouseVec.rotate(-1.02);
+  // moveCam(sign*(mouseVec.x-whalf)/tileSize, sign*(mouseVec.y-hhalf)/tileSize);
 }
 
 void clampCamera() {

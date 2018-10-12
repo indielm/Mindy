@@ -1,0 +1,14 @@
+[
+	{
+		"name": "conveyor",
+		"speed": 1
+	},
+	{
+		"name": "router",
+		"speed": 1
+	},
+	{
+		"name": "steelconveyor",
+		"speed": 2
+	}
+]
