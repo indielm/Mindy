@@ -4,6 +4,7 @@ class MMap {
   String []mapTiles;
   HashMap<Integer, String> mapColors;
   HashMap<String, Integer> edgeRanks;
+  HashMap<String, PShape> blockShapeGroups;
   int tilesX, tilesY, totTiles, sclWidth;
   PVector size;
   PShape shBlocks; 
@@ -56,7 +57,6 @@ class MMap {
     }
   }
 
-  HashMap<String, PShape> blockShapeGroups;
   void initBlockShape() { // if blocks, only draw blocks, else only draw floor tiles
     blockShapeGroups = new HashMap<String, PShape>();
     String [] blocks = {"stoneblock1", "sandblock1", "grassblock1", "snowblock1", "blackstoneblock1"};
@@ -113,7 +113,6 @@ class MMap {
     }
     return false;
   }
-
 
   PShape TexturedCube(PImage tex, int x, int y) {
     PShape s = createShape();
