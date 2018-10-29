@@ -6,21 +6,24 @@ class Block {
   PShape shape;
   String type;
   int index;
-  Block(int index, String type) {
+  JSONObject properties;
+  int [] loc;
+  Block(int index, String type, int [] loc) {
     this.type = type;
     this.index = index;
-    addModel();
+    this.loc = new int []{loc[0],loc[1]};
+    properties = blocksJson.getJSONObject(type);
+    addModel(loc);
   }
 
-  void addModel() {
+  void addModel(int [] loc) {
     shape = paraModel1(Models.get(buildType));
     if (shape!=null) {
       shapeMode(CENTER);
       shape.translate(-4, -4);
-      if (blocksJson.getJSONObject(type).hasKey("rotates")) shape.rotate(placeRotation);
+      if (properties.hasKey("rotates")) shape.rotate(placeRotation);
       shape.translate(4, 4);
-      shape.translate(cursorXY[0]*tileSize, cursorXY[1]*tileSize);
-      // m.rotate(placeRotation);
+      shape.translate(loc[0]*tileSize, loc[1]*tileSize);
       allModels.addChild(shape);
       println(index, type, " added");
     }
@@ -30,16 +33,17 @@ class Block {
     if (shape!=null) allModels.removeChild(allModels.getChildIndex(shape));
     println(index, type, " removed");
     return this;
-   }
-   
-   void refresh(){
-     removeModel();
-     addModel();
-   }
+  }
+
+  void refresh() {
+    removeModel();
+    addModel(loc);
+  }
+
 }
 
 void setBlock(int []xy, String type) {
   int i = xy[0]+xy[1]*mmap.tilesY;
   if (blocks.containsKey(i)) blocks.remove(blocks.get(i).removeModel());
-  blocks.put(i, new Block(i, type));
+  blocks.put(i, new Block(i, type, xy));
 }

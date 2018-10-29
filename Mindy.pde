@@ -8,12 +8,12 @@ void settings() {
 
 void setup() {
   ((PGraphicsOpenGL)g).textureSampling(3);
-  
+
   config = loadJSONObject("/data/config.json");
   blocksJson = loadJSONObject("data/blocks.json");
   distribution = loadJSONArray("/data/distribution.json");
   piBuildMenu = loadImage("/data/buildMenu.png");
-  
+
   initSprites();
   loadModels();
 
@@ -35,7 +35,7 @@ void setup() {
 
 void draw() {    
   benchmark = new ArrayList<Long>();
-  benchmark.add(System.nanoTime());
+  bench();
   if (redrawMap || keyHit('m')) {
     mmap.initDraw();
     redrawMap = false;
@@ -50,15 +50,15 @@ void draw() {
 
   cam.add(camDelta.set(camTarget).sub(cam).mult(0.18*deltaT)); // deltaTime compensated low pass filter 
 
-  benchmark.add(System.nanoTime());
+  bench();
   renderDbgLayer();
-  benchmark.add(System.nanoTime());
+  bench();
   renderCam();
-  benchmark.add(System.nanoTime());
+  bench();
   image(pgRender, 0, 0, w, h);
   hint(DISABLE_DEPTH_TEST);
   drawBuildTab();
-  benchmark.add(System.nanoTime());
+  bench();
   drawDebugText();
   hint(ENABLE_DEPTH_TEST);
 }

@@ -55,8 +55,8 @@ void buildTabClick() {
       my = (mouseY-(height-tabH+4));
       my = 2*my/104;
       selectedSlot = mx+(my*4)-8;
-      
-      if ((selectedBuildTab>=0) && (selectedSlot < buildButtons.get(selectedBuildTab).length)  && (selectedSlot>=0)){
+
+      if ((selectedBuildTab>=0) && (selectedSlot < buildButtons.get(selectedBuildTab).length)  && (selectedSlot>=0)) {
         buildType = buildButtons.get(selectedBuildTab)[selectedSlot];
         println(buildButtons.get(selectedBuildTab)[selectedSlot]);
       } else {

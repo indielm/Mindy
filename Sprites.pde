@@ -3,9 +3,6 @@ import java.util.*;
 
 ConcurrentHashMap<String, Sprite> spritesAtlas;
 ConcurrentHashMap<String, PImage> spriteImages;
-
-//ConcurrentHashMap<String, PShape> models;
-
 ConcurrentHashMap<String, Model> Models;
 
 PImage spriteSheet;
@@ -58,14 +55,8 @@ class Model {
 
 JSONObject blocksJson;
 int loadModels() {
- allModels = createShape(GROUP);
-
-
+  allModels = createShape(GROUP);
   Models = new ConcurrentHashMap<String, Model>();
-  //JSONArray json = loadJSONArray("data/models.json");
-  
-  //models = new ConcurrentHashMap<String,PShape>();////new HashMap<String, PShape>();
-
   Set<String> keys = (Set<String>)blocksJson.keys();
 
   for (String obj : keys) {
@@ -74,22 +65,13 @@ int loadModels() {
       Models.put(obj, new Model(obj, model.getFloat("bend"), model.getFloat("height"), model.getInt("type"), model.getInt("texAngle")));
   }
 
-  //for (int i = 1; i < modelsJson.size(); i++) {
-  //JSONObject model = json.getJSONObject(i);
-  //if (model.getInt("type") == 1)
-  //models.put(model.getString("sprite"), paraModel1(model.getString("sprite"), model.getFloat("bend"), model.getFloat("height"), model.getInt("texAngle"), false));
+  for (int i : blocks.keySet()) blocks.get(i).refresh();
 
-  //Models.put(model.getString("sprite"),new Model(model.getString("sprite"), model.getFloat("bend"), model.getFloat("height"), model.getInt("type"), model.getInt("texAngle")));  
-  //}
-
-  for (int i : blocks.keySet()) {
-    blocks.get(i).refresh();
-  }
   PShape core = getNewModel("core");
   allModels = createShape(GROUP);
   core.translate(1024, 1024);
   allModels.addChild(core);
-  
+
   return Models.size();
 }
 
@@ -121,7 +103,6 @@ PShape paraModel1(String texture, float bend, float b, int texAngle, boolean bac
   model.noStroke();
   float scale = 0;
 
-  //model.translate(-3*tileSize, -tileSize, 0);
   if (sp.w == 8) {
     model.translate(-tileSize, 0, 0);
     scale = tileSize/3.0;

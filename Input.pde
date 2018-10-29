@@ -1,19 +1,17 @@
 PVector cursor = new PVector(0, 0);
 PVector mouseVec = new PVector(0, 0);
-int [] cursorXY = {0, 0};
+int [] cursorXY = {0, 0}, lastXY = {0, 0};
 char keyHit = ' ';
 boolean [] keys = new boolean[256];
 boolean [] lastKeys = new boolean[256];
 float placeRotation = 0;
-
 boolean [] mouseButtons = new  boolean[40];
 
-int [] lastXY = {0, 0};
 
 void mouseDragged() {
   if ((mouseButton == RIGHT) && (!dontDrag)) moveCam(pmouseX-mouseX, pmouseY-mouseY);
   else if (mouseButton == LEFT) {
-    
+
     if (blocksJson.hasKey(buildType) && (blocksJson.getJSONObject(buildType).hasKey("rotates"))) {
       if ((cursorXY[0]!=lastXY[0]) || (cursorXY[1]!=lastXY[1])) {
         PVector mouseDelta = new PVector(cursorXY[0]-lastXY[0], cursorXY[1]-lastXY[1]);

@@ -143,8 +143,9 @@ class MMap {
     String type ;
     int xy = x+y*tilesX;
 
-    // +Y "south" face
+
     try {
+      // +Y "south" face
       type = mapColors.get(piMap.pixels[xy+tilesX]);
       if (!type.contains("block")) {
         s.vertex(-1, 1, 1, u, v);
@@ -152,9 +153,7 @@ class MMap {
         s.vertex( 1, 1, -1, ub, vb);
         s.vertex(-1, 1, -1, u, vb);
       }
-
       // +X "east" face
-
       type = mapColors.get(piMap.pixels[xy+1]);
       if (!type.contains("block")) {
         s.vertex( 1, -1, 1, u, v);
@@ -162,24 +161,22 @@ class MMap {
         s.vertex( 1, 1, -1, ub, vb);
         s.vertex( 1, 1, 1, u, vb);
       }
-
-            // -Y "north" face
+      // -Y "north" face
       type = mapColors.get(piMap.pixels[xy-tilesX]);
-       if (!type.contains("block")) {
-       s.vertex(-1, -1, -1, u, v);
-       s.vertex( 1, -1, -1, ub, v);
-       s.vertex( 1, -1,  1, ub, vb);
-       s.vertex(-1, -1,  1, u, vb);
-       }
+      if (!type.contains("block")) {
+        s.vertex(-1, -1, -1, u, v);
+        s.vertex( 1, -1, -1, ub, v);
+        s.vertex( 1, -1, 1, ub, vb);
+        s.vertex(-1, -1, 1, u, vb);
+      }
       // -X "west" face
-      
       type = mapColors.get(piMap.pixels[xy-1]);
-       if (!type.contains("block")) {
-       s.vertex(-1, -1, -1, u, v);
-       s.vertex(-1, -1,  1, ub, v);
-       s.vertex(-1,  1,  1, ub, vb);
-       s.vertex(-1,  1, -1, u, vb);
-       }
+      if (!type.contains("block")) {
+        s.vertex(-1, -1, -1, u, v);
+        s.vertex(-1, -1, 1, ub, v);
+        s.vertex(-1, 1, 1, ub, vb);
+        s.vertex(-1, 1, -1, u, vb);
+      }
     }
     catch (Exception e) {
     }
