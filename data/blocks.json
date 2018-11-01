@@ -1,16 +1,15 @@
 {
-  "conveyor": {
+  "core": {
     "texAngle": 3,
-    "bend": 0.7674999237060547,
+    "bend": 0.6549999713897705,
     "type": 1,
-    "height": 0.21000000834465027,
-	"rotates": true
+    "height": 2
   },
-  "junction": {
+  "block": {
     "texAngle": 3,
-    "bend": 0.7674999237060547,
+    "bend": 1,
     "type": 1,
-    "height": 0.21000000834465027
+    "height": 1
   },
   "block-2x2": {
     "texAngle": 3,
@@ -18,23 +17,47 @@
     "type": 1,
     "height": 1
   },
-  "powerbooster": {
-    "texAngle": 3,
-    "bend": 0.4599999785423279,
-    "type": 1,
-    "height": 1.5
-  },
   "block-3x3": {
     "texAngle": 3,
     "bend": 1,
     "type": 1,
     "height": 1
   },
-  "ironwall": {
+  "conveyor": {
     "texAngle": 3,
-    "bend": 1,
+    "bend": 0.7674999237060547,
     "type": 1,
-    "height": 1.994999885559082
+    "height": 0.21000000834465027,
+    "rotates": true,
+    "conveyor": true
+  },
+  "steelconveyor": {
+    "texAngle": 3,
+    "bend": 0.7674999237060547,
+    "type": 1,
+    "height": 0.21000000834465027,
+    "rotates": true,
+    "conveyor": true
+  },
+  "poweredconveyor": {
+    "texAngle": 3,
+    "bend": 0.7674999237060547,
+    "type": 1,
+    "height": 0.21000000834465027,
+    "rotates": true,
+    "conveyor": true
+  },
+  "router": {
+    "texAngle": 3,
+    "bend": 0.45249998569488525,
+    "type": 1,
+    "height": 2.0099997520446777
+  },
+  "junction": {
+    "texAngle": 3,
+    "bend": 0.7674999237060547,
+    "type": 1,
+    "height": 0.21000000834465027
   },
   "sorter": {
     "texAngle": 3,
@@ -42,13 +65,56 @@
     "type": 1,
     "height": 2.0099997520446777
   },
-  "irondrill": {
+  "conveyortunnel": {
     "texAngle": 3,
-    "bend": 0.5275000333786011,
+    "bend": 0.8650000095367432,
+    "type": 1,
+    "height": 1.2300000190734863,
+    "rotates": true
+  },
+  "teleporter": {
+    "texAngle": 3,
+    "bend": 0.7674999237060547,
     "type": 1,
     "height": 1.2300000190734863
   },
+  "powerlaser": {
+    "texAngle": 3,
+    "bend": 0.6024999618530273,
+    "type": 1,
+    "height": 0.19499999284744263
+  },
   "combustiongenerator": {
+    "texAngle": 3,
+    "bend": 0.5575000047683716,
+    "type": 1,
+    "height": 1
+  },
+  "nuclearreactor": {
+    "texAngle": 3,
+    "bend": 0.4599999785423279,
+    "type": 1,
+    "height": 1.5
+  },
+  "powerbooster": {
+    "texAngle": 3,
+    "bend": 0.4599999785423279,
+    "type": 1,
+    "height": 1.5
+  },
+  "rtgenerator": {
+    "texAngle": 3,
+    "bend": 0.5575000047683716,
+    "type": 1,
+    "height": 1
+  },
+  "powerlaserrouter": {
+    "texAngle": 3,
+    "bend": 0.6024999618530273,
+    "type": 1,
+    "height": 0.19499999284744263
+  },
+  "coalgenerator": {
     "texAngle": 3,
     "bend": 0.5575000047683716,
     "type": 1,
@@ -66,88 +132,26 @@
     "type": 1,
     "height": 1
   },
-  "steelwall": {
-    "texAngle": 3,
-    "bend": 1,
-    "type": 1,
-    "height": 1.994999885559082
-  },
-  "uraniumdrill": {
-    "texAngle": 3,
-    "bend": 0.5275000333786011,
-    "type": 1,
-    "height": 1.2300000190734863
-  },
-  "nuclearreactor": {
-    "texAngle": 3,
-    "bend": 0.4599999785423279,
-    "type": 1,
-    "height": 1.5
-  },
-  "conduit": {
-    "texAngle": 3,
-    "bend": 0.7674999237060547,
-    "type": 1,
-    "height": 0.21000000834465027,
-	"rotates": true
-  },
   "shieldgenerator": {
     "texAngle": 3,
     "bend": 0.5049998760223389,
     "type": 1,
     "height": 1.994999885559082
   },
-  "poweredconveyor": {
-    "texAngle": 3,
-    "bend": 0.7674999237060547,
-    "type": 1,
-    "height": 0.21000000834465027,
-	"rotates": true
-  },
-  "powerlaser": {
-    "texAngle": 3,
-    "bend": 0.6024999618530273,
-    "type": 1,
-    "height": 0.19499999284744263
-  },
-  "router": {
-    "texAngle": 3,
-    "bend": 0.45249998569488525,
-    "type": 1,
-    "height": 2.0099997520446777
-  },
-  "liquidrouter": {
+  "pump": {
     "texAngle": 3,
     "bend": 0.45249998569488525,
     "type": 1,
     "height": 1.215000033378601
   },
-  "teleporter": {
+  "conduit": {
     "texAngle": 3,
     "bend": 0.7674999237060547,
     "type": 1,
-    "height": 1.2300000190734863
+    "height": 0.21000000834465027,
+    "rotates": true
   },
-  "titaniumwall-large": {
-    "texAngle": 3,
-    "bend": 1,
-    "type": 1,
-    "height": 1.994999885559082
-  },
-  "conveyortunnel": {
-    "texAngle": 3,
-    "bend": 0.8650000095367432,
-    "type": 1,
-    "height": 1.2300000190734863,
-	"rotates": true
-  },
-  "block": {
-    "texAngle": 3,
-    "bend": 1,
-    "type": 1,
-    "height": 1
-  },
-  "pump": {
+  "liquidrouter": {
     "texAngle": 3,
     "bend": 0.45249998569488525,
     "type": 1,
@@ -159,121 +163,12 @@
     "type": 1,
     "height": 1.215000033378601
   },
-  "duriumwall": {
-    "texAngle": 3,
-    "bend": 1,
-    "type": 1,
-    "height": 1.994999885559082
-  },
-  "titaniumdrill": {
-    "texAngle": 3,
-    "bend": 0.5275000333786011,
-    "type": 1,
-    "height": 1.2300000190734863
-  },
-  "rtgenerator": {
-    "texAngle": 3,
-    "bend": 0.5575000047683716,
-    "type": 1,
-    "height": 1
-  },
-  "crucible": {
-    "texAngle": 3,
-    "bend": 0.45249998569488525,
-    "type": 1,
-    "height": 1.5
-  },
-  "thermalgenerator": {
-    "texAngle": 3,
-    "bend": 0.5575000047683716,
-    "type": 1,
-    "height": 1
-  },
-  "coalgenerator": {
-    "texAngle": 3,
-    "bend": 0.5575000047683716,
-    "type": 1,
-    "height": 1
-  },
-  "steelwall-large": {
-    "texAngle": 3,
-    "bend": 1,
-    "type": 1,
-    "height": 1.994999885559082
-  },
-  "smelter": {
-    "texAngle": 3,
-    "bend": 0.5349999666213989,
-    "type": 1,
-    "height": 1.0049998760223389
-  },
-  "titaniumpurifier": {
-    "texAngle": 3,
-    "bend": 0.5575000047683716,
-    "type": 1,
-    "height": 1
-  },
-  "steelconveyor": {
-    "texAngle": 3,
-    "bend": 0.7674999237060547,
-    "type": 1,
-    "height": 0.21000000834465027,
-	"rotates": true
-  },
-  "powerlaserrouter": {
-    "texAngle": 3,
-    "bend": 0.6024999618530273,
-    "type": 1,
-    "height": 0.19499999284744263
-  },
-  "stoneformer": {
-    "texAngle": 3,
-    "bend": 0.8199999332427979,
-    "type": 1,
-    "height": 1
-  },
-  "core": {
-    "texAngle": 3,
-    "bend": 0.6549999713897705,
-    "type": 1,
-    "height": 2.0
-  },
-  "coaldrill": {
-    "texAngle": 3,
-    "bend": 0.5275000333786011,
-    "type": 1,
-    "height": 1.2300000190734863
-  },
-  "stonedrill": {
-    "texAngle": 3,
-    "bend": 0.5275000333786011,
-    "type": 1,
-    "height": 1.2300000190734863
-  },
-  "duriumwall-large": {
-    "texAngle": 3,
-    "bend": 1,
-    "type": 1,
-    "height": 1.994999885559082
-  },
-  "stonewall": {
-    "texAngle": 3,
-    "bend": 1,
-    "type": 1,
-    "height": 1.994999885559082
-  },
-  "lavasmelter": {
-    "texAngle": 3,
-    "bend": 0.45249998569488525,
-    "type": 1,
-    "height": 1.215000033378601
-  },
   "pulseconduit": {
     "texAngle": 3,
     "bend": 0.7674999237060547,
     "type": 1,
     "height": 0.21000000834465027,
-	"rotates": true
+    "rotates": true
   },
   "liquidjunction": {
     "texAngle": 3,
@@ -281,16 +176,136 @@
     "type": 1,
     "height": 1.215000033378601
   },
+  "stonewall": {
+    "texAngle": 3,
+    "bend": 1,
+    "type": 1,
+    "height": 1.994999885559082
+  },
+  "ironwall": {
+    "texAngle": 3,
+    "bend": 1,
+    "type": 1,
+    "height": 1.994999885559082
+  },
+  "steelwall": {
+    "texAngle": 3,
+    "bend": 1,
+    "type": 1,
+    "height": 1.994999885559082
+  },
+  "steelwall-large": {
+    "texAngle": 3,
+    "bend": 1,
+    "type": 1,
+    "height": 1.994999885559082
+  },
   "compositewall": {
     "texAngle": 3,
     "bend": 1,
     "type": 1,
     "height": 1.994999885559082
   },
+  "titaniumwall-large": {
+    "texAngle": 3,
+    "bend": 1,
+    "type": 1,
+    "height": 1.994999885559082
+  },
+  "duriumwall": {
+    "texAngle": 3,
+    "bend": 1,
+    "type": 1,
+    "height": 1.994999885559082
+  },
+  "duriumwall-large": {
+    "texAngle": 3,
+    "bend": 1,
+    "type": 1,
+    "height": 1.994999885559082
+  },
+  "thermalgenerator": {
+    "texAngle": 3,
+    "bend": 0.5575000047683716,
+    "type": 1,
+    "height": 1
+  },
+  "titaniumpurifier": {
+    "texAngle": 3,
+    "bend": 0.5575000047683716,
+    "type": 1,
+    "height": 1
+  },
+  "smelter": {
+    "texAngle": 3,
+    "bend": 0.5349999666213989,
+    "type": 1,
+    "height": 1.0049998760223389
+  },
+  "crucible": {
+    "texAngle": 3,
+    "bend": 0.45249998569488525,
+    "type": 1,
+    "height": 1.5
+  },
+  "stoneformer": {
+    "texAngle": 3,
+    "bend": 0.8199999332427979,
+    "type": 1,
+    "height": 1
+  },
+  "lavasmelter": {
+    "texAngle": 3,
+    "bend": 0.45249998569488525,
+    "type": 1,
+    "height": 1.215000033378601
+  },
+  "irondrill": {
+    "texAngle": 3,
+    "bend": 0.5275000333786011,
+    "type": 1,
+    "height": 1.2300000190734863,
+    "producer": "iron",
+    "produceSpeed": 1
+  },
+  "coaldrill": {
+    "texAngle": 3,
+    "bend": 0.5275000333786011,
+    "type": 1,
+    "height": 1.2300000190734863,
+    "producer": "coal",
+    "produceSpeed": 1
+  },
+  "stonedrill": {
+    "texAngle": 3,
+    "bend": 0.5275000333786011,
+    "type": 1,
+    "height": 1.2300000190734863,
+    "producer": "stone",
+    "produceSpeed": 1
+  },
+  "titaniumdrill": {
+    "texAngle": 3,
+    "bend": 0.5275000333786011,
+    "type": 1,
+    "height": 1.2300000190734863,
+    "producer": "titanium",
+    "produceSpeed": 1
+  },
+  "uraniumdrill": {
+    "texAngle": 3,
+    "bend": 0.5275000333786011,
+    "type": 1,
+    "height": 1.2300000190734863,
+    "producer": "uranium",
+    "produceSpeed": 1
+  },
   "omnidrill": {
     "texAngle": 3,
     "bend": 0.5275000333786011,
     "type": 1,
-    "height": 1.2300000190734863
+    "height": 1.2300000190734863,
+    "producer": "ore",
+    "produceSpeed": 1
   }
 }
