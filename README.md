@@ -1,6 +1,6 @@
 # Mindy
 
-An attempt to make a Mindustry 3.5 style tower defense game. 
+An attempt to make a Mindustry 3.5 style tower defense game in Processing 3.
 
   additional goals are
   
